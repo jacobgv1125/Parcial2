@@ -1,0 +1,19 @@
+$ORIGIN electronicos.com.
+$TTL 3H
+@       IN SOA  server.electronicos.com. root@electronicos.com. (
+                                        0       ; serial
+                                        1D      ; refresh
+                                        1H      ; retry
+                                        1W      ; expire
+                                        3H )    ; minimum
+@       IN      NS      server.electronicos.com.
+@       IN      MX      10  correo.electronicos.com.
+
+;host en la zona
+
+server  IN      A       192.168.50.3
+www     IN      CNAME   server
+correo  IN      A       192.168.50.2
+www2     IN      CNAME   correo
+firewall  IN      A       192.168.50.4
+www3     IN      CNAME   firewall
